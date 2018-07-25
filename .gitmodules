@@ -1,0 +1,12 @@
+[submodule "micro-minding-grpc_gateway"]
+	path = micro-minding-grpc_gateway
+	url = git@github.com:hannesrabo/micro-minding-grpc_gateway.git
+[submodule "micro-minding-documents"]
+	path = micro-minding-documents
+	url = git@github.com:hannesrabo/micro-minding-documents.git
+[submodule "micro-minding-react_app"]
+	path = micro-minding-react_app
+	url = git@github.com:juliuscc/micro-minding-react_app.git
+[submodule "micro-minding-user_aut"]
+	path = micro-minding-user_aut
+	url = git@github.com:juliuscc/micro-minding-user_aut.git
