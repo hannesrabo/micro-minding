@@ -1,0 +1,17 @@
+version: "3"
+
+# sudo systemctl start docker
+# docker-compose up
+
+services:
+  grpc-gateway:
+    build: 
+      context: ./
+      dockerfile: ./micro-minding-grpc_gateway/Dockerfile
+      args:
+        app_env: dev
+    volumes:
+      - ./micro-minding-grpc_gateway/app:/go/src/github.com/hannesrabo/micro-minding/micro-minding-grpc_gateway/app
+    ports:
+      - 8081:8081
+
