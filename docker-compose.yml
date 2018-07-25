@@ -4,6 +4,17 @@ version: "3"
 # docker-compose up
 
 services:
+  react-app:
+    build: 
+      context: ./
+      dockerfile: ./micro-minding-react_app/Dockerfile
+      args:
+        app_env: dev
+    volumes:
+      - ./micro-minding-react_app/src:/micro-minding-react_app/src
+    ports:
+      - 3000:3000
+
   grpc-gateway:
     build: 
       context: ./
@@ -25,4 +36,15 @@ services:
       - ./micro-minding-documents/app:/go/src/github.com/hannesrabo/micro-minding/micro-minding-documents/app
     ports:
       - 8082:8082
+
+  user-auth:
+    build: 
+      context: ./
+      dockerfile: ./micro-minding-user_aut/Dockerfile
+      args:
+        app_env: dev
+    volumes:
+      - ./micro-minding-user_aut/app:/go/src/github.com/hannesrabo/micro-minding/micro-minding-user_aut/app
+    ports:
+      - 8083:8083
 
