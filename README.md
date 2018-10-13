@@ -22,3 +22,6 @@ $ docker compose build
 $ # Run all containers with dependencies
 $ docker compose up
 ```
+
+# Project status
+This project is very much a work in progress to test out technology around micro service architecture.
